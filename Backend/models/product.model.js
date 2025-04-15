@@ -12,7 +12,7 @@ const ProductSchema = mongoose.Schema({
     categories:{type:Array},
     concern:{type:Array},
     brand:{type:String},
-    skintype:{type:Array},
+    skinType:{type:Array},
     originalPrice:{type:Number},
     discountedPrice:{type:Number},
     inStock:{type:Boolean, default:true},
@@ -20,7 +20,7 @@ const ProductSchema = mongoose.Schema({
         {
             star: {type:Number, min:1, max:5},
             comment: {type:String},
-            name: {type:String}
+            name: {type:String},
             postedBy: {type:String}
         }
     ]
