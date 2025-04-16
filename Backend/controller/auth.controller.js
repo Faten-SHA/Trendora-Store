@@ -59,4 +59,16 @@ const loginUser = asyncHandler(async (req, res) => {
         throw new Error("Invalid email or password");
     }
 
-})
+});
+
+//Logout user
+// route: POST /api/v1/auth/logout
+// access: private
+
+const logOut = asyncHandler(async (req, res) => {
+    res.cookie('jwt', '',{httpOnly:true,expires:new Date(0)});
+    res.status(200).json({message:"Logged out successfully"});
+});
+
+export { registerUser, loginUser, logOut };
+
