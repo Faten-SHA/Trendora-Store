@@ -5,7 +5,7 @@ import generateToken from "../util/generateToken.js";
 //Register a new user
 // route: POST /api/v1/auth/register
 // access: public
-export const registerUser = asyncHandler(async (req, res) => {
+const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password} = req.body;
 
   // Check if user already exists
@@ -63,7 +63,7 @@ const loginUser = asyncHandler(async (req, res) => {
 
 //Logout user
 // route: POST /api/v1/auth/logout
-// access: private
+// access: public
 
 const logOut = asyncHandler(async (req, res) => {
     res.cookie('jwt', '',{httpOnly:true,expires:new Date(0)});
