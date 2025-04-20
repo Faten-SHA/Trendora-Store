@@ -6,6 +6,7 @@ import authRoute from './routes/auth.route.js'; // Importing authentication rout
 import productRoute from './routes/product.route.js'; // Importing product routes
 import bannerRoute from './routes/banner.route.js'; // Importing banner routes
 import userRoute from './routes/user.route.js'; // Importing user routes
+import orderRoute from './routes/order.route.js'; // Importing order routes
 
 const app = express(); 
 
@@ -23,6 +24,7 @@ app.use("/api/v1/auth", authRoute); // Mounting the authentication routes on the
 app.use("/api/v1/products", productRoute); // Mounting the product routes on the specified path
 app.use("/api/v1/banners", bannerRoute); // Mounting the banner routes on the specified path
 app.use("/api/v1/users", userRoute); // Mounting the user routes on the specified path
+app.use("/api/v1/orders", orderRoute); 
 
 //Error handling middleware
 app.use(notFound); // Middleware to handle 404 errors
