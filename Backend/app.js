@@ -5,7 +5,7 @@ import { notFound, errorHandler } from './Middleware/error.middleware.js'; // Im
 import authRoute from './routes/auth.route.js'; // Importing authentication routes
 import productRoute from './routes/product.route.js'; // Importing product routes
 import bannerRoute from './routes/banner.route.js'; // Importing banner routes
-
+import userRoute from './routes/user.route.js'; // Importing user routes
 
 const app = express(); 
 
@@ -22,6 +22,7 @@ app.use(cookieParser()); // Middleware to parse cookies from the request headers
 app.use("/api/v1/auth", authRoute); // Mounting the authentication routes on the specified path
 app.use("/api/v1/products", productRoute); // Mounting the product routes on the specified path
 app.use("/api/v1/banners", bannerRoute); // Mounting the banner routes on the specified path
+app.use("/api/v1/users", userRoute); // Mounting the user routes on the specified path
 
 //Error handling middleware
 app.use(notFound); // Middleware to handle 404 errors
