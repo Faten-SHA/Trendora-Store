@@ -56,7 +56,7 @@ const getUserOrder = asyncHandler(async (req, res) => {
 
 // GET ALL ORDERS
 const getAllOrders = asyncHandler(async (req, res) => {
-    const orders = await Order.find().reverse();
+    const orders = await Order.find();
     if (!orders) {
         res.status(400);
         throw new Error("Orders not found");

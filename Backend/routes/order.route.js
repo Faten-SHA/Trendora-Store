@@ -1,6 +1,7 @@
 import express from 'express';
 const router = express.Router();
 import { createOrder, updateOrder, deleteOrder, getUserOrder, getAllOrders } from '../controller/order.controller.js'; 
+import protect from '../Middleware/auth.middleware.js';
 
 //CREATE ORDER ROUTE
 router.post("/", createOrder);
@@ -9,7 +10,7 @@ router.post("/", createOrder);
 router.put("/:id", updateOrder);
 
 //GET ALL ORDERS
-router.get("/", getAllOrders);
+router.get("/",protect, getAllOrders);
 
 // DELETE ORDER
 router.delete("/:id", deleteOrder);
