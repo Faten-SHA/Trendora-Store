@@ -27,5 +27,6 @@ const ProductSchema = mongoose.Schema({
 
 })
 
+ProductSchema.index({"$**": "text"}); // Create a text index on all fields
 const Product = mongoose.model('Product', ProductSchema);
 export default Product;
