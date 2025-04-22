@@ -1,17 +1,21 @@
 import express from "express";
 import dotenv from "dotenv";
-import dbConnection from "./utils/db.js"; // Import the dbConnection function
+import dbConnection from "./utils/db.js"; 
 import cron from "node-cron";
+import sendWelcomeEmail from "./EmailServices/sendWelcomeEmail.js"; 
+import sendPendingOrderEmail from "./EmailServices/sendPendingOrderEmail.js"; 
 
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT;
 
 // SCHEDULE SERVICES
+//https://crontab.guru/ this website is used to help with the cron job schedule
 
 const services = () => {
   cron.schedule("* * * * * *", () => {
-    console.log("running a task every second"); //https://crontab.guru/ this website is used to help with the cron job schedule
+    sendWelcomeEmail();
+    sendPendingOrderEmail(); 
   });
 };
 
