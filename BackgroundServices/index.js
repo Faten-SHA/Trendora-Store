@@ -11,7 +11,7 @@ const PORT = process.env.PORT;
 
 const services = () => {
   cron.schedule("* * * * * *", () => {
-    console.log("running a task every second"); //https://crontab.guru/ this website is used to help you with the cron job schedule
+    console.log("running a task every second"); //https://crontab.guru/ this website is used to help with the cron job schedule
   });
 };
 
