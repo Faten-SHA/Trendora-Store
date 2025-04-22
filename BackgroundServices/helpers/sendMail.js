@@ -18,6 +18,9 @@ let configurations = {
         user: process.env.EMAIL,
         pass: process.env.PASSWORD,
     },
+    tls: {
+        rejectUnauthorized: false
+    } // this is used to avoid the error of self signed certificate in nodejs , this is not recommended in production 
 }
 
 const sendMail = async (messageoption) => {
