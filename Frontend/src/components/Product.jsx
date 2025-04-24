@@ -1,11 +1,11 @@
 import StarRatings from "react-star-ratings";
 
-const Product = () => {
+const Product = ({img}) => {
   return (
     <div>
-        <div className="flex flex-col items-center justify-center h-[500px] m-[10px] cursor-pointer bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+        <div className="flex flex-col items-center justify-center h-[500px] m-[20px] cursor-pointer bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
         <img
-          src="bag1.png"
+          src={img}
           alt="Product image"
           className="h-[400px] w-[320px] bg-cover"
         />
@@ -16,7 +16,7 @@ const Product = () => {
         <span className="font-semibold text-[18px] flex items-center justify-center">
           $100
         </span>
-        <span className="flex items-center">
+        <span className="flex items-center mb-3">
           <StarRatings
             rating={2.403}
             starDimension="25px"
