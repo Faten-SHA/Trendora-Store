@@ -5,7 +5,7 @@ const Footer = () => {
       <div  className="flex justify-between py-[5%]">
         <div>
           <img
-            src="Trendora1.png"
+            src="/Trendora1.png"
             alt="Trendora logo"
             height={250}
             width={250}

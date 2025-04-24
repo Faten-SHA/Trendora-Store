@@ -4,6 +4,7 @@ import Myaccount from "./pages/Myaccount.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Announcement from "./components/Announcement.jsx";
+import Product from "./pages/Product.jsx";
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 
 function App() {
@@ -35,6 +36,10 @@ function App() {
         {
           path: "/myaccount",
           element: <Myaccount />,
+        },
+        {
+          path: "/product/:productId",
+          element: <Product />,
         },
       ],
     },
