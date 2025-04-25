@@ -6,6 +6,10 @@ import Footer from "./components/Footer.jsx";
 import Announcement from "./components/Announcement.jsx";
 import Product from "./pages/Product.jsx";
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
+import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
+import ProductsList from "./pages/ProductsList";
+import Order from "./pages/Order.jsx";
 
 function App() {
   //create layout for the app to show on all pages
@@ -34,12 +38,29 @@ function App() {
           element: <Cart />,
         },
         {
+          path: "/login",
+          element: <Login />,
+        },
+        {
+          path: "/create-account",
+          element: <Register />,
+        },
+        {
           path: "/myaccount",
           element: <Myaccount />,
         },
         {
           path: "/product/:productId",
           element: <Product />,
+        },
+        {
+          path: "/products/:categoryId",
+          element: <ProductsList />,
+        },
+        {
+          path: "/myorders",
+          element: <Order />,
+          
         },
       ],
     },

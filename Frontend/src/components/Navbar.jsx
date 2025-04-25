@@ -37,12 +37,14 @@ const Navbar = () => {
             </Badge>
           </div>
         </Link>
+        <Link to="/login">
         <div className="flex items-center space-x-2 border border-pink-300 p-2 rounded-lg hover:bg-pink-100 cursor-pointer duration-300 m-8">
           <FaUser className="text-[#E82561] hover:text-pink-600 transition duration-600" />
           <span className="text-[#E82561] hover:text-pink-600 font-semibold">
             Login
           </span>
         </div>
+        </Link>
 
         <div></div>
       </div>
