@@ -8,6 +8,7 @@ import Product from "./pages/Product.jsx";
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
+import ProductsList from "./pages/ProductsList";
 
 function App() {
   //create layout for the app to show on all pages
@@ -50,6 +51,10 @@ function App() {
         {
           path: "/product/:productId",
           element: <Product />,
+        },
+        {
+          path: "/products/:categoryId",
+          element: <ProductsList />,
         },
       ],
     },
